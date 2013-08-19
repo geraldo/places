@@ -7,8 +7,8 @@ function loadMap() {
 		latlng = new L.LatLng(48.30, 14.30);
 
 	var icon = L.icon({
-		iconUrl: '/wp/wp-content/themes/places/images/leaf-green.png',
-		shadowUrl: '/wp/wp-content/themes/places/images/leaf-shadow.png',
+		iconUrl: '/places/wp-content/themes/places/images/leaf-green.png',
+		shadowUrl: '/places/wp-content/themes/places/images/leaf-shadow.png',
 		iconSize:     [38, 95], // size of the icon
 		shadowSize:   [50, 64], // size of the shadow
 		iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
@@ -23,7 +23,7 @@ function loadMap() {
 	for (var i = 0; i < places.length; i++) {
 		var a = places[i];
 		var marker = new L.Marker(new L.LatLng(a[2], a[3]), { icon: icon});
-		marker.bindPopup("<b>"+a[1]+"</b><br><!--id: ["+a[0]+"]--><br><br><a href='/wp/#/wp/place/"+a[4]+"'>Details anzeigen</a>").openPopup();
+		marker.bindPopup("<b>"+a[1]+"</b><br><!--id: ["+a[0]+"]--><br><br><a href='/places/#/places/place/"+a[4]+"'>Details anzeigen</a>").openPopup();
 		markers.addLayer(marker);
 		markersArray.push(marker);
 	}

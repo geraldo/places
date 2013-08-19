@@ -54,7 +54,7 @@ jQuery(document).ready(function($) {
 			if (url.indexOf("table")!= -1) {
 				$('#primary').css('width','980');
 				//load js
-				$.getScript(window.location.protocol+"//"+window.location.host+"/wp/wp-content/themes/places/lib/jquery.dataTables.min.js")
+				$.getScript(window.location.protocol+"//"+window.location.host+"/places/wp-content/themes/places/lib/jquery.dataTables.min.js")
 					.done(function(script, textStatus) {
 						//console.log( textStatus );
 

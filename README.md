@@ -16,6 +16,13 @@ All registers of this content type are drawn by the template on the map. The onl
 - Export Places: Exports all registers of content type `place` to geojson file places.tmp.js which is used by leaflet.
 - DataTables: Shows all registers of content type `place` as a [data table](http://www.datatables.net/).
 
+## Install
+
+* Install wordpress theme as usual
+* Move export folder to /wp-content/export
+* Create content for custom content type `place`, or by importing with Import Places template or through Wordpress form
+* Adapt URLs if install directory is called different than `places`
+
 ## Included libraries
 
 - [jQuery hashchange event v1.3](http://benalman.com/projects/jquery-hashchange-plugin/)

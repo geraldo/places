@@ -3,7 +3,7 @@
 	Template Name: Export Places
 */
 
-$url = '/var/www/wp/wp-content/export/places.tmp.js';
+$url = '/var/www/places/wp-content/export/places.tmp.js';
 
 //$foutput = (file_exists($url)) ? fopen($url, "w") : fopen($url, "w+");
 $foutput = fopen($url, "w");

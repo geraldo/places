@@ -3,7 +3,7 @@
 	Template Name: Import Places
 */
 
-$lines = file("http://localhost/wp/wp-content/export/places.csv");
+$lines = file("http://geraldkogler.com/places/wp-content/export/places.csv");
 
 foreach ($lines as $placesid => $line) {
 	//start after header = line 0
