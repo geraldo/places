@@ -5,23 +5,23 @@ Places: Template für Wordpress
 
 The theme is ajax enabled and thought for mapping projects. It uses leaflet library to show locations on a OpenStreetMap and intends to stay always with the same map as background.
 
-## Custom content type `place`
+## Custom post type `place`
 
-All registers of this content type are drawn by the template on the map. The only fields which have to be defined are `latitude` and `longitude`.
+All registers of this post type are drawn by the template on the map. The only fields which have to be defined are `latitude` and `longitude`. The post type can easily be extended adding fields to `places_add_custom_box()` at `functions.php` and modifying template `content-single-place.php`.
 
 ## Page templates
 
 - Home: Hides content window, typically used for home pages which directly want to show a map.
-- Import Places: Imports a CSV file with format "id;title;latitude;longitude" into content type `place`.
-- Export Places: Exports all registers of content type `place` to geojson file places.tmp.js which is used by leaflet.
-- DataTables: Shows all registers of content type `place` as a [data table](http://www.datatables.net/).
+- Import Places: Imports a CSV file with format "id;title;latitude;longitude" into post type `place`.
+- Export Places: Exports all registers of post type `place` to geojson file `places.tmp.js`. Leaflet uses file `places.js` so periodically (using a cron job or a Wordpress hook) exporting registers and copying the exported file over `places.js` updates the locations on the map.
+- DataTables: Shows all registers of post type `place` as a [data table](http://www.datatables.net/).
 
 ## Install
 
-* Install wordpress theme as usual
-* Move export folder to /wp-content/export
-* Create content for custom content type `place`, or by importing with Import Places template or through Wordpress form
-* Adapt URLs if install directory is called different than `places`
+_ Install wordpress theme as usual.
+_ Move export folder to /wp-content/export.
+_ Create content for custom post type `place`, or by importing with Import Places template or through Wordpress form.
+_ Adapt all domains named geraldkogler.com to your domain and URLs containing `places` to your install directory.
 
 ## Included libraries
 

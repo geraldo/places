@@ -144,6 +144,18 @@ function places_scripts() {
 	if ( is_singular() && wp_attachment_is_image() ) {
 		wp_enqueue_script( 'places-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
 	}
+
+	/* ajaxifying theme */
+	if ( ! is_admin() ) {
+		$url = get_stylesheet_directory_uri() . '/lib/';
+		wp_enqueue_script( 'hash-change', "{$url}jquery.ba-hashchange.min.js", array('jquery'), '', true);
+		$url = get_stylesheet_directory_uri() . '/js/';
+		wp_enqueue_script( 'ajax-theme', "{$url}ajax.js", array( 'hash-change' ), '', true);
+	}
+
+	if (is_admin()) {
+		wp_enqueue_style( 'places-style', get_template_directory_uri() . '/admin.css');
+	}
 }
 add_action( 'wp_enqueue_scripts', 'places_scripts' );
 
@@ -151,19 +163,6 @@ add_action( 'wp_enqueue_scripts', 'places_scripts' );
  * Implement the Custom Header feature
  */
 //require( get_template_directory() . '/inc/custom-header.php' );
-
-/* ajaxifying theme */
-if ( ! is_admin() ) {
-    $url = get_stylesheet_directory_uri() . '/lib/';
-    wp_enqueue_script( 'hash-change', "{$url}jquery.ba-hashchange.min.js", array('jquery'), '', true);
-    $url = get_stylesheet_directory_uri() . '/js/';
-    wp_enqueue_script( 'ajax-theme', "{$url}ajax.js", array( 'hash-change' ), '', true);
-}
-
-if (is_admin()) {
-	wp_enqueue_style( 'places-style', get_template_directory_uri() . '/admin.css');
-}
-
 
 /* redirect after login */
 function admin_default_page() {
@@ -174,7 +173,7 @@ add_filter('login_redirect', 'admin_default_page');
 /* Add custom logo */
 function custom_login_logo() {
 	echo '<style type="text/css">
-	h1 a { background-image: url(http://linz.pflueckt.at/static/leaflet051/images/leaf-green.png) !important; background-size: 38px 95px !important; }
+	h1 a { background-image: url(http://geraldkogler.com/wp-content/themes/places/images/leaf-green.png) !important; background-size: 38px 95px !important; }
 	</style>';
 }
 add_action('login_head', 'custom_login_logo');
