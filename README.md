@@ -18,10 +18,10 @@ All registers of this post type are drawn by the template on the map. The only f
 
 ## Install
 
-_ Install wordpress theme as usual.
-_ Move export folder to /wp-content/export.
-_ Create content for custom post type `place`, or by importing with Import Places template or through Wordpress form.
-_ Adapt all domains named geraldkogler.com to your domain and URLs containing `places` to your install directory.
+1. Install wordpress theme as usual.
+2. Move export folder to /wp-content/export.
+3. Create content for custom post type `place`, or by importing with Import Places template or through Wordpress form.
+4. Adapt all domains named geraldkogler.com to your domain and URLs containing `places` to your install directory.
 
 ## Included libraries
 
