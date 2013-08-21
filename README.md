@@ -9,6 +9,10 @@ The theme is ajax enabled and thought for mapping projects. It uses leaflet libr
 
 All registers of this post type are drawn by the template on the map. The only fields which have to be defined are `latitude` and `longitude`. The post type can easily be extended adding fields to `places_add_custom_box()` at `functions.php` and modifying template `content-single-place.php`.
 
+## Static or dynamic loading of locations
+
+By default leaflet takes all registers of post type `place` through map.php and draws them on the map. To fasten up map loading, especially when having a lot of locations, it's recommandable to use static loading of places. It can be activated changing loading of `map.php` to `map.js`. To still get all actual locations on map you should use template Export Places as described in next section.
+
 ## Page templates
 
 - Home: Hides content window, typically used for home pages which directly want to show a map.

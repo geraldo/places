@@ -22,15 +22,20 @@ function loadMap() {
 
 	for (var i = 0; i < places.length; i++) {
 		var a = places[i];
-		var marker = new L.Marker(new L.LatLng(a[2], a[3]), { icon: icon});
-		marker.bindPopup("<b>"+a[1]+"</b><br><!--id: ["+a[0]+"]--><br><br><a href='/places/#/places/place/"+a[4]+"'>Details anzeigen</a>").openPopup();
+		var id = places[0];
+		var title = places[1];
+		var lat = places[2];
+		var long = places[3];
+		var link = places[4];
+		var marker = new L.Marker(new L.LatLng(lat, long), { icon: icon});
+		marker.bindPopup("<b>"+title+"</b><br><!--id: ["+id+"]--><br><br><a href='/places/#/places/place/"+link+"'>Details anzeigen</a>").openPopup();
 		markers.addLayer(marker);
 		markersArray.push(marker);
 	}
 	map.addLayer(markers);
 
 	L.control.locate({
-		title: "Zeige mir meinen aktuellen Standpunkt",
-		popupText: ["Du bist im Umkreis von ", " von diesem Punkt."],
+		title: "Show me my position",
+		popupText: ["You are in a radius of ", " from this point."],
 	}).addTo(map);
 }

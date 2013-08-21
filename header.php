@@ -36,7 +36,10 @@
 
 	<script src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/export/places.js" type="text/javascript"></script>
 	<?php wp_head(); ?>
-	<script src="<?php echo get_template_directory_uri(); ?>/map.js" type="text/javascript"></script>
+	<!-- activate map.js for drawing markers from static geojson file places.js -->
+	<!--<script src="<?php echo get_template_directory_uri(); ?>/map.js" type="text/javascript"></script>-->
+	<!-- activate map.php for drawing markers from wordpress post type place -->
+	<script src="<?php echo get_template_directory_uri(); ?>/map.php" type="text/javascript"></script>
 </head>
 
 <body <?php body_class(); ?> onload="loadMap();">
