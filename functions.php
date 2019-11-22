@@ -124,13 +124,6 @@ add_action( 'widgets_init', 'places_widgets_init' );
  * Enqueue scripts and styles
  */
 function places_scripts() {
-	/* load scripts for jquery tabs */
-	if ( !is_admin() ) {
-		wp_register_style( 'tabs_css', get_template_directory_uri().'/jquery-ui-1.8.23.custom.css' );
-		wp_enqueue_style( 'tabs_css' );
-		wp_enqueue_script('jquery-ui-tabs');
-	}
-
 	wp_enqueue_style( 'places-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'places-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
