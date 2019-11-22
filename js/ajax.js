@@ -1,6 +1,6 @@
 /*
 	based on Tutorial "How To AJAXify WordPress Theme"
-	http://www.deluxeblogtips.com/2010/05/how-to-ajaxify-wordpress-theme.html
+	https://deluxeblogtips.com/how-to-ajaxify-wordpress-theme/
 */
 
 jQuery(document).ready(function($) {

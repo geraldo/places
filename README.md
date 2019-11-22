@@ -3,7 +3,7 @@ Places: Wordpress Ajax Template
 
 `Places` is a theme for Wordpress. It's based on `_s`, or [`underscores`](http://underscores.me/).
 
-The theme is ajax enabled (heavy inspired by [AJAXify Wordpress Theme tutorial](http://www.deluxeblogtips.com/2010/05/how-to-ajaxify-wordpress-theme.html)) and thought for mapping projects. It uses leaflet library to show locations on a OpenStreetMap and intends to stay always with the same map as background.
+The theme is ajax enabled (heavy inspired by [AJAXify Wordpress Theme tutorial](https://deluxeblogtips.com/how-to-ajaxify-wordpress-theme/)) and thought for mapping projects. It uses leaflet library to show locations on a OpenStreetMap and intends to stay always with the same map as background.
 
 ## Custom post type `place`
 
@@ -24,9 +24,10 @@ By default leaflet takes all registers of post type `place` through map.php and 
 ## Install
 
 1. Install wordpress theme as usual.
-2. Create content for custom post type `place`, or by importing with Import Places template or through Wordpress form.
-3. Create pages based on templates `Places JSON`, `DataTables` and `Home`.
-4. If you want an empty homepage (not showing the posts as default)you have to change Settings > Reading > Your homepage displays > A static page > Homepage > Home.
+2. Change initial zoom and center of map on line 19 and 20 in map.php.
+3. Create content for custom post type `place`, or by importing with Import Places template or through Wordpress form.
+4. Create pages based on templates `Places JSON`, `DataTables` and `Home`.
+5. If you want an empty homepage (not showing the posts as default)you have to change Settings > Reading > Your homepage displays > A static page > Homepage > Home.
 
 ## Included libraries
 
