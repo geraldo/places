@@ -173,7 +173,7 @@ add_filter('login_redirect', 'admin_default_page');
 /* Add custom logo */
 function custom_login_logo() {
 	echo '<style type="text/css">
-	h1 a { background-image: url(http://geraldkogler.com/wp-content/themes/places/images/leaf-green.png) !important; background-size: 38px 95px !important; }
+	h1 a { background-image: url('.get_template_directory_uri().'/images/leaf-green.png) !important; background-size: 38px 95px !important; }
 	</style>';
 }
 add_action('login_head', 'custom_login_logo');

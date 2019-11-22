@@ -19,30 +19,18 @@
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 	<![endif]-->
 
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/lib/leaflet.css" />
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/lib/MarkerCluster.css" />
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/lib/MarkerCluster.Default.css" />
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/lib/L.Control.Locate.css" />
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
 
-	<!--[if lte IE 8]>
-		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/lib/leaflet.ie.css" />
-		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/lib/MarkerCluster.Default.ie.css" />
-		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/lib/L.Control.Locate.ie.css"/>
-	<![endif]-->
-
-	<script src="<?php echo get_template_directory_uri(); ?>/lib/leaflet.js"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/lib/leaflet.markercluster.js"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/lib/L.Control.Locate.js" ></script>
-
-	<script src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/export/places.js" type="text/javascript"></script>
 	<?php wp_head(); ?>
-	<!-- activate map.js for drawing markers from static geojson file places.js -->
-	<!--<script src="<?php echo get_template_directory_uri(); ?>/map.js" type="text/javascript"></script>-->
+	<!-- activate map.js and places.js for drawing markers from static geojson file places.js -->
+	<!--<script src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/export/places.js" type="text/javascript"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/map.js" type="text/javascript"></script>-->
 	<!-- activate map.php for drawing markers from wordpress post type place -->
 	<script src="<?php echo get_template_directory_uri(); ?>/map.php" type="text/javascript"></script>
 </head>
 
-<body <?php body_class(); ?> onload="loadMap();">
+<body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
 

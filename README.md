@@ -18,21 +18,20 @@ By default leaflet takes all registers of post type `place` through map.php and 
 - Home: Hides content window, typically used for home pages which directly want to show a map.
 - Import Places: Imports a CSV file with format "id;title;latitude;longitude" into post type `place`.
 - Export Places: Exports all registers of post type `place` to geojson file `places.tmp.js`. Leaflet uses file `places.js` so periodically (using a cron job or a Wordpress hook) exporting registers and copying the exported file over `places.js` updates the locations on the map.
-- DataTables: Shows all registers of post type `place` as a [data table](http://www.datatables.net/).
+- Places JSON: Outputs all nodes of content type `place` as JSON.
+- DataTables: Shows all registers of post type `place` (from `Places JSON` file) as a [data table](http://www.datatables.net/).
 
 ## Install
 
 1. Install wordpress theme as usual.
-2. Move export folder to /wp-content/export.
-3. Create content for custom post type `place`, or by importing with Import Places template or through Wordpress form.
-4. Adapt all domains named geraldkogler.com to your domain and URLs containing `places` to your install directory.
+2. Create content for custom post type `place`, or by importing with Import Places template or through Wordpress form.
+3. Create pages based on templates `Places JSON`, `DataTables` and `Home`.
+4. If you want an empty homepage (not showing the posts as default)you have to change Settings > Reading > Your homepage displays > A static page > Homepage > Home.
 
 ## Included libraries
 
 - [jQuery hashchange event v1.3](http://benalman.com/projects/jquery-hashchange-plugin/)
-- [Leaflet v0.6](http://leafletjs.com/)
-- [Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster)
-- [Leaflet.Locate](https://github.com/domoritz/leaflet-locatecontrol)
+- [Leaflet v1.6](http://leafletjs.com/)
 - [DataTables v1.9.4](http://www.datatables.net/)
 
 ## License
